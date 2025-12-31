@@ -95,7 +95,9 @@ class MainActivity : AppCompatActivity() {
             
             try {
                 val doc = withContext(Dispatchers.IO) { Jsoup.connect(currentUrl).get() }
-                var content = doc.body().text() // Usando text para tradução mais limpa
+                // Seletor específico para nineheavens.org ou fallback para body
+                val contentElement = doc.select("section#chapter-content").first() ?: doc.body()
+                var content = contentElement.text()
                 
                 if (binding.cbTranslate.isChecked) {
                     content = if (binding.rbOffline.isChecked) {

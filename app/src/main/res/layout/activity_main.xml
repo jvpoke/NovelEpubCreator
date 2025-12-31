@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/novel_url_hint">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNovelUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/chapter_url_hint">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etChapterUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/rgDetectionMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/rbAuto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/auto_detect"
+                android:checked="true" />
+            <RadioButton
+                android:id="@+id/rbManual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/manual_add" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/llManualInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <Button
+                android:id="@+id/btnAddChapter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Adicionar Capítulo Manualmente" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Status: Aguardando..." />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/cbTranslate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Traduzir para PT-BR" />
+
+        <RadioGroup
+            android:id="@+id/rgTranslateMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <RadioButton
+                android:id="@+id/rbOnline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/translate_online"
+                android:checked="true" />
+            <RadioButton
+                android:id="@+id/rbOffline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/translate_offline" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Iniciar Criação" />
+
+    </LinearLayout>
+</ScrollView>

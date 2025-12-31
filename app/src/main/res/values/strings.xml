@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Novel Epub Creator</string>
+    <string name="novel_url_hint">Link da Novel (Página Inicial)</string>
+    <string name="chapter_url_hint">Link do Primeiro Capítulo</string>
+    <string name="auto_detect">Identificação Automática</string>
+    <string name="manual_add">Adicionar Manualmente</string>
+    <string name="finish">Concluir</string>
+    <string name="export_epub">Exportar EPUB</string>
+    <string name="translate_online">Tradução Online</string>
+    <string name="translate_offline">Tradução Offline</string>
+</resources>
